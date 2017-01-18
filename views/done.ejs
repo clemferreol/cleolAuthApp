@@ -1,0 +1,18 @@
+<div>
+ID: <%= user.id %><br/>
+Username: <%= user.login %><br/>
+</div>
+
+<% if (user.public_repos > 1) {%>
+	You have <%= user.public_repos %> repositories
+<% }else { %>
+	You have <%= user.public_repos %> repository
+<%	}%>
+
+<div>
+<a href="/repos">See the list</a>
+</div>
+
+<div>	
+	<% include repos %>
+</div>

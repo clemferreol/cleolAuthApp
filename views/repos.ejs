@@ -1,0 +1,15 @@
+<% if(repos){
+		for(var repo in repos) { %>
+			
+			<div>
+			<span> Id : <%- repos[repo].id %> </span>
+			</div>
+			<div>
+			<span> Name : <%- repos[repo].name %> </span>
+			</div>
+			<div>
+			<span> <a href="<%- repos[repo].url %>"><%- repos[repo].url %></a> </span>
+			</div>	
+			<hr>
+		<% } 
+ 	} %>
